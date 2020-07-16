@@ -18,5 +18,8 @@
   "homepage": "https://github.com/g1stavo/negaodabl#readme",
   "devDependencies": {
     "standard": "^14.3.4"
-  }
+  },
+  "bin": {
+    "negaodabl": "./index.js"
+  },
 }
