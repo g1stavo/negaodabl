@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const exect = require('child_process').exec
 const path = require('path')
 const fs = require('fs')
