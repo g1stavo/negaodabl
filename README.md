@@ -13,7 +13,7 @@ PRA GRINGO É MAIS CARO
 Install globally:
 
 ```shell
-npm install -g negaodabl
+$ npm install -g negaodabl
 ```
 
 ## Run with [npx](https://www.npmjs.com/package/npx)
@@ -36,7 +36,6 @@ $ npx negaodabl apertaabraba
  - [anabastos/daledale](https://github.com/anabastos/daledale)
 
 ## See also
- - [daledale](https://github.com/anabastos/daledale)
  - [Oloquinho](https://github.com/oloquinho/oloquinho)
  - [xFiles](https://github.com/BrOrlandi/xfiles/)
  - [Faustão Errou](https://github.com/BrOrlandi/faustao-errou/)
