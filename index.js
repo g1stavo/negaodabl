@@ -10,15 +10,12 @@ const soundPath = path.join(mainPath, './mery')
 const jackChanny = () => {
   const cmd = {
     linux: `paplay ${soundPath}.ogg`,
-    windows: `${path.join(`${mainPath}./forWindows.vbs`)} ${soundPath}.mp3`,
     mac: `afplay  ${soundPath}.mp3`
   }
 
   switch (process.platform) {
     case 'linux':
       return exec(cmd.linux)
-    case 'win32':
-      return exec(cmd.windows)
     case 'darwin':
       return exec(cmd.mac)
   }
