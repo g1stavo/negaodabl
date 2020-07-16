@@ -1,0 +1,22 @@
+{
+  "name": "negaodabl",
+  "version": "1.0.0",
+  "description": "PRA GRINGO É MAIS CARO",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g1stavo/negaodabl.git"
+  },
+  "author": "@g1stavo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g1stavo/negaodabl/issues"
+  },
+  "homepage": "https://github.com/g1stavo/negaodabl#readme",
+  "devDependencies": {
+    "standard": "^14.3.4"
+  }
+}
