@@ -6,7 +6,7 @@ const fs = require('fs')
 
 const mainPath = path.dirname(fs.realpathSync(__filename))
 
-const jackChanny = () => {
+const run = () => {
   const args = process.argv.slice(2);
 
   const filenameAudio = getFilenameAudio(args[0])
@@ -41,8 +41,8 @@ const exec = (cmd) => {
   })
 }
 
-module.exports = jackChanny
+module.exports = run
 
 if (!module.parent) {
-  jackChanny()
+  run()
 }
