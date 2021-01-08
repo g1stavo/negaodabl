@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const exect = require('child_process').exec
+const { exec: exect } = require('child_process')
 const path = require('path')
 const fs = require('fs')
 
@@ -8,9 +8,7 @@ const mainPath = path.dirname(fs.realpathSync(__filename))
 
 const jackChanny = () => {
   const args = process.argv.slice(2);
-
-  const filenameAudio = getFilenameAudio(args[0])
-  const soundPath = path.join(mainPath, '/audios', filenameAudio)
+  const soundPath = path.join(mainPath, '/audios', getFilenameAudio(args[0]))
   const cmd = {
     linux: `paplay ${soundPath}.ogg`,
     mac: `afplay  ${soundPath}.mp3`
@@ -21,10 +19,12 @@ const jackChanny = () => {
       return exec(cmd.linux)
     case 'darwin':
       return exec(cmd.mac)
+    default:
+      throw new Error(`Can't press the braba in this platform, only linux and darwin`)
   }
 }
 
-const getFilenameAudio = (arg) => {
+const getFilenameAudio = arg => {
   switch (arg) {
     case 'apertaabraba':
       return './aperta_a_braba'
@@ -35,7 +35,7 @@ const getFilenameAudio = (arg) => {
   }
 };
 
-const exec = (cmd) => {
+const exec = cmd => {
   return exect(cmd, err => {
     if (err) console.error(err)
   })
